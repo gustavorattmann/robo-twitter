@@ -41,8 +41,7 @@ services:
       DEBUG: robo-twitter:*
     command: npm run start
     depends_on:
-      - zookeeper
-      - kafka
+     - kafka
 volumes:
   zookeeper_data:
     driver: local

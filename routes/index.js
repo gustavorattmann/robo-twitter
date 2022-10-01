@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
+require('../src/admin');
+require('../src/producer');
+var {body} = require('../src/consumer');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express sem Docker: teste novo 7' });
+  res.send(body)
 });
 
 module.exports = router;
